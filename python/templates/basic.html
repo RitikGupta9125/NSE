@@ -81,7 +81,7 @@ anychart.onDocumentReady(function () {
     var dataSet = anychart.data.set(data);
 
     // map the data
-    var mapping = dataSet.mapAs({x:Date, value:High});
+    var mapping = dataSet.mapAs({x:Date, value:High}); // replace {x:Date, value:High}with {x:0, value:1} 
 
     // create a chart
     var chart = anychart.line();
