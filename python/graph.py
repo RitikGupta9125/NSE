@@ -9,13 +9,13 @@ dc.set_index("Date",inplace=True)
 print(dc.head())
 print(type(dc.reset_index().values))
 
-
+k = [[1,2],[4,8]]
 
 
 app = Flask(__name__)
 @app.route('/')
 def home():
-    return render_template('basic.html',d = dc.to_json(orient='table') )
+    return render_template('basic.html',d = dc.to_json(orient='table') ) # If you replace dc.to_json(orient='table') with k then it work fine
 
 if __name__ == '__main__':
     app.run(port = 5000,debug = True )
